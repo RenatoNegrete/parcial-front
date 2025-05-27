@@ -1,1 +1,11 @@
-<p>create works!</p>
+<h2>Crear Entidad</h2>
+
+<form (ngSubmit)="guardarEntidad()" #formEntidad="ngForm">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="entidad.nombre" name="nombre" required>
+
+  <label for="nit">NIT:</label>
+  <input type="text" id="nit" [(ngModel)]="entidad.nit" name="nit" required>
+
+  <button type="submit">Guardar</button>
+</form>

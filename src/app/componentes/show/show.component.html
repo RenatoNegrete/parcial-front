@@ -1,1 +1,11 @@
-<p>show works!</p>
+<h2>Lista de Entidades</h2>
+
+<ul *ngIf="datosEntidades.length > 0; else noDatos">
+  <li *ngFor="let entidad of datosEntidades">
+    {{ entidad.nombre }} - {{ entidad.nit }}
+  </li>
+</ul>
+
+<ng-template #noDatos>
+  <p>No hay entidades disponibles.</p>
+</ng-template>
