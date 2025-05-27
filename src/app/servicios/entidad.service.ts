@@ -21,11 +21,11 @@ export class EntidadService {
     );
   }
 
-  createAdministrador(entidad: Entidad): Promise<Entidad> {
+  createEntidad(entidad: Entidad): Promise<Entidad> {
     return axios.post<Entidad>(this.apiUrl, entidad)
       .then(response => response.data)
       .catch(error => {
-        console.error('Error creando administrador:', error);
+        console.error('Error creando entidad:', error);
         throw error;
       });
   }

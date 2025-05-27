@@ -23,7 +23,7 @@ export class CreateComponent {
   async guardarEntidad() {
     try {
       console.log(this.entidad)
-      const resultado = await this.entidadService.createAdministrador(this.entidad);
+      const resultado = await this.entidadService.createEntidad(this.entidad);
       console.log('Entidad creada:', resultado);
       this.entidad = { id: 0, nombre: '', nit: '' };
     } catch (error) {
